@@ -22,6 +22,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    task downloadSDK(type:Exec) {
+
+        workingDir './'
+        commandLine "python", "download_native_sdk.py", "--sdk_download_url", "", "--sdk_zip_root_folder", ""
+
+    }
+
+    tasks.withType(JavaCompile) {
+        preBuild.dependsOn 'downloadSDK'
+    }
 }
 
 dependencies {
