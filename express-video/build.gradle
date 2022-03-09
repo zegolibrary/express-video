@@ -25,7 +25,7 @@ android {
     task downloadSDK(type:Exec) {
 
         workingDir './'
-        commandLine "python", "download_native_sdk.py", "--sdk_download_url", "https://artifact-master.zego.cloud/generic/express/public/express_native/stable/video/android-java/ZegoExpressEngine-video-android-java.zip?version=2.16.3.6569", "--sdk_zip_root_folder", ""
+        commandLine "python", "download_native_sdk.py", "--sdk_download_url", "https://storage.zego.im/rtc/ZegoExpressVideo/android/2.17.0.20234/ZegoExpressVideo-android-shared-java.zip", "--sdk_zip_root_folder", "release/Library"
 
     }
 
